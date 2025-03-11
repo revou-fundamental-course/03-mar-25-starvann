@@ -1,0 +1,461 @@
+/* Ini file CSS */
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: #90caf9;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.navbar .logo {
+    width: 200px; /* Sesuaikan ukuran logo */
+    height: auto;
+}
+
+.navbar-nav {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-nav a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.navbar-nav a:hover {
+    color: #0277bd;
+}
+
+/* # Menu Toggle untuk Mobile */
+.menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+    }
+
+    .navbar-nav.show {
+        display: flex;
+    }
+
+    .navbar-nav a {
+        padding: 15px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+
+/* Home Section */
+#home {
+    text-align: left;
+    padding: 50px 20px;
+    background: #f4f4f4;
+    font-size: x-large;
+    text-justify: auto;
+    padding-left: 5rem;
+}
+
+#home p {
+    font-size:xx-large;
+}
+
+#home h1 {
+    font-size: 5rem;
+}
+
+/* # Button */
+.cta {
+    background-color: blue;
+    font-size: x-large;
+    padding: 1rem;
+    color: white;
+    margin: 1rem;
+    margin-bottom: 3rem;
+    margin-left: 4rem;
+    width: 10%;
+}
+
+.cta a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Slideshow */
+/* # Slideshow Container */
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+/* # Gambar Slide */
+.slide {
+    display: none;
+    width: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* # Tombol Navigasi */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.prev:hover, .next:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* # Dots untuk Navigasi */
+.dots-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    margin: 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* # Responsiveness */
+@media screen and (max-width: 768px) {
+    .prev, .next {
+        padding: 8px 12px;
+    }
+}
+
+
+/* Contact Section */
+#contact {
+    padding: 50px 20px;
+    background: #f9f9f9;
+    text-align: center;
+}
+form {
+    max-width: 400px;
+    margin: auto;
+}
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+button {
+    background: #333;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+/* # Responsive Design */
+@media (max-width: 600px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+/* About Me Section */
+#about {
+    padding: 60px 30px;
+    background: #f4f4f4;
+    text-align: center;
+}
+
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    margin: auto;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+.profile-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 30px;
+}
+
+.about-text {
+    max-width: 700px;
+    text-align: left;
+}
+
+.about-text h2 {
+    color: #333;
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.about-text p {
+    color: #555;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.skills-list li {
+    background: #e3f2fd;
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 7px;
+    border-radius: 6px;
+    font-weight: bold;
+    color: #0277bd;
+    font-size: 1rem;
+}
+
+/* Projects Section */
+#projects {
+    padding: 60px 30px;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.project-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 350px;
+    text-align: left;
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.project-card h3 {
+    margin-top: 15px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.project-card p {
+    color: #555;
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+.project-card a {
+    display: inline-block;
+    padding: 8px 12px;
+    background: #0277bd;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.project-card a:hover {
+    background: #01579b;
+}
+
+/* Skills Section */
+#skills {
+    padding: 60px 30px;
+    background: #ffffff;
+    text-align: center;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.skill-card {
+    background: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 300px;
+    text-align: center;
+}
+
+.skill-card h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.skill-card p {
+    color: #555;
+    font-size: 1rem;
+}
+
+/* # Responsiveness */
+@media screen and (max-width: 768px) {
+    .skills-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Learning Now Section */
+#learning {
+    padding: 60px 30px;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.learning-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.learning-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 300px;
+    text-align: center;
+}
+
+.learning-card h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.learning-card p {
+    color: #555;
+    font-size: 1rem;
+}
+
+/* Responsiveness */
+@media screen and (max-width: 768px) {
+    .learning-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Achievements Section */
+#achievements {
+    padding: 60px 30px;
+    background: #ffffff;
+    text-align: center;
+}
+
+#achievements p {
+    color: #555;
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* Footer Section */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    margin-top: 40px;
+}
+
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-links a {
+    color: #90caf9;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-links a:hover {
+    color: #64b5f6;
+}
